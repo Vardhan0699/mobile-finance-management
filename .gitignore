@@ -1,0 +1,5 @@
+﻿/vendor/
+/public/vendor.zip
+/node_modules/
+/.env
+/storage/

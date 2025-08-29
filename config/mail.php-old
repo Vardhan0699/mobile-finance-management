@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'mailers' => [
+        'smtp' => [
+            'transport' => 'smtp',
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'), // Must match SSL cert
+            'port' => env('MAIL_PORT', 465),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => 900,
+            'auth_mode' => null,
+          #  'stream' => [
+          #      'ssl' => [
+          #          'verify_peer' => false,
+          #          'verify_peer_name' => false,
+          #          'allow_self_signed' => true,
+           #     ],
+           # ],
+            // Remove the 'options' array - it's causing your error
+        ],
+    ],
+
+    // Rest of your mail configuration...
+];
